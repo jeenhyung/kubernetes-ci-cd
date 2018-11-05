@@ -7,7 +7,7 @@ var io = require('socket.io')(http);
 var path = require("path");
 var Etcd = require('node-etcd');
 var cors = require('cors');
-//
+
 app.use(express.static('public'));
 
 var bodyParser = require("body-parser");
@@ -104,7 +104,7 @@ app.post('/loadtest/consecutive', function (req, res) {
 app.get('/up/:podId', function (req, res) {
   console.log('Server UP: %s', req.params.podId);
   etcd.setSync("pod-list/" + req.params.podId, req.params.podId);
-  res.send('up done');  //
+  res.send('up done');
 });
 
 app.get('/down/:podId', function (req, res) {
