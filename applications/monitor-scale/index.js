@@ -7,7 +7,7 @@ var io = require('socket.io')(http);
 var path = require("path");
 var Etcd = require('node-etcd');
 var cors = require('cors');
-
+//
 app.use(express.static('public'));
 
 var bodyParser = require("body-parser");
