@@ -103,8 +103,8 @@ app.post('/loadtest/consecutive', function (req, res) {
 
 app.get('/up/:podId', function (req, res) {
   console.log('Server UP: %s', req.params.podId);
-  etcd.setSync("pod-list/" + req.params.podId, req.params.podId);
-  res.send('up done');
+//  etcd.setSync("pod-list/" + req.params.podId, req.params.podId);
+  res.send(etcd);
 });
 
 app.get('/down/:podId', function (req, res) {
